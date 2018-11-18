@@ -14,13 +14,13 @@ import UIKit
 
 
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
-  var companies = ["Apple":"AAPL","Microsoft":"MSFT","Google":"GOOG", "FaceBook":"FB","Amazon":"AMZN"]
-  
+  var companies = ["-":"-"]
   
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        
         return self.companies.keys.count
     }
     
@@ -51,7 +51,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         self.creataDictanory()
+        
         self.companyPickerView.delegate = self
         self.indicatorView.hidesWhenStopped = true
         self.indicatorView.startAnimating()
@@ -61,7 +64,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 
     }
     
-    
+   
     
 
     
@@ -76,9 +79,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         let url = URL(string: "https://api.iextrading.com/1.0/stock/market/list/infocus")!
         
         let dataTask = URLSession.shared.dataTask(with: url ) { (data, response, error) in
-            guard
+            
+            guard let name = (response as? HTTPURLResponse)?.statusCode else { return }
+            switch name {
+            case 200: guard
                 error == nil,
-                (response as? HTTPURLResponse)?.statusCode == 200,
+                
                 let data = data
                 else {
                     print("Network error")
@@ -86,8 +92,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             }
             
             do {
-            let cource =  try  JSONDecoder().decode([GroceryProduct].self, from: data)
-               
+                let cource =  try  JSONDecoder().decode([GroceryProduct].self, from: data)
+                
                 for obj in cource {
                     dict[obj.companyName] =  obj.symbol
                 }
@@ -95,10 +101,20 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 DispatchQueue.main.async {
                     self.companyPickerView.reloadAllComponents()
                 }
-              print(dict)
+                print(dict)
             } catch {
                 
+                }
+            case 100...102: print("1xx: Informational = \(name)")
+            case 201...226: print("2xx: Success = \(name)")
+            case 300...308: print("3xx: Redirection = \(name)")
+            case 400...451: print("4xx: Client Error  = \(name)")
+            case 500...526: print("5xx: Server Error = \(name)")
+            
+            default:return
             }
+            
+            
             
             
             
@@ -110,6 +126,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     
     func reqestQuote(for symbol: String) {
+        
         let url = URL(string: "https://api.iextrading.com/1.0//stock/\(symbol)/company")!
         let url2 = URL(string: "https://api.iextrading.com/1.0/stock/\(symbol)/delayed-quote")!
         let url3 = URL(string: "https://api.iextrading.com/1.0/stock/\(symbol)/logo")!
@@ -149,6 +166,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         dataTask.resume()
         dataTask2.resume()
         dataTask3.resume()
+        
     }
     
     
@@ -270,6 +288,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         self.companyPriceChangeLabel.text = "-"
         self.logoImageView.image = nil
         
+        
         let selectedRow = self.companyPickerView.selectedRow(inComponent: 0)
         let selectedSymbol = Array(self.companies.values)[selectedRow]
        
@@ -280,4 +299,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 
         self.reqestQuoteUpdate()
     }
+    
+    
+    
+    
+    
 }
