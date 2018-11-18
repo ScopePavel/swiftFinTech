@@ -106,10 +106,15 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 
                 }
             case 100...102: print("1xx: Informational = \(name)")
+                self.createAlert(message: "\(name)")
             case 201...226: print("2xx: Success = \(name)")
+                self.createAlert(message: "\(name)")
             case 300...308: print("3xx: Redirection = \(name)")
+                self.createAlert(message: "\(name)")
             case 400...451: print("4xx: Client Error  = \(name)")
+                self.createAlert(message: "\(name)")
             case 500...526: print("5xx: Server Error = \(name)")
+                self.createAlert(message: "\(name)")
             
             default:return
             }
@@ -123,6 +128,15 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         return dict
     }
     
+    
+   
+        func createAlert(message:String) {
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+        NSLog("The \"OK\" alert occured.")
+        }))
+        self.present(alert, animated: true, completion: nil)
+        }
     
     
     func reqestQuote(for symbol: String) {

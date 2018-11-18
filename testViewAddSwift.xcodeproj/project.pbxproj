@@ -32,15 +32,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B2B79E72219B542000927D36 /* testViewAddSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = testViewAddSwift.app; path = "/Users/pavelscope/swiftFinTech/build/Debug-iphoneos/testViewAddSwift.app"; sourceTree = "<absolute>"; };
+		B2B4BD0221A1FD6D00C39954 /* testViewAddSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testViewAddSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2B4BD0321A1FD6D00C39954 /* testViewAddSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = testViewAddSwiftTests.xctest; path = "/Users/pavelscope/swiftFinTech/build/Debug-iphoneos/testViewAddSwiftTests.xctest"; sourceTree = "<absolute>"; };
+		B2B4BD0421A1FD6D00C39954 /* testViewAddSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = testViewAddSwiftUITests.xctest; path = "/Users/pavelscope/swiftFinTech/build/Debug-iphoneos/testViewAddSwiftUITests.xctest"; sourceTree = "<absolute>"; };
 		B2B79E75219B542000927D36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2B79E77219B542000927D36 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B2B79E7A219B542000927D36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B2B79E7C219B542500927D36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2B79E7F219B542500927D36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2B79E81219B542500927D36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B2B79E86219B542500927D36 /* testViewAddSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = testViewAddSwiftTests.xctest; path = "/Users/pavelscope/swiftFinTech/build/Debug-iphoneos/testViewAddSwiftTests.xctest"; sourceTree = "<absolute>"; };
-		B2B79E91219B542500927D36 /* testViewAddSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = testViewAddSwiftUITests.xctest; path = "/Users/pavelscope/swiftFinTech/build/Debug-iphoneos/testViewAddSwiftUITests.xctest"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				B2B79E74219B542000927D36 /* testViewAddSwift */,
+				B2B4BD0221A1FD6D00C39954 /* testViewAddSwift.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,7 +106,7 @@
 			);
 			name = testViewAddSwift;
 			productName = testViewAddSwift;
-			productReference = B2B79E72219B542000927D36 /* testViewAddSwift.app */;
+			productReference = B2B4BD0221A1FD6D00C39954 /* testViewAddSwift.app */;
 			productType = "com.apple.product-type.application";
 		};
 		B2B79E85219B542500927D36 /* testViewAddSwiftTests */ = {
@@ -123,7 +124,7 @@
 			);
 			name = testViewAddSwiftTests;
 			productName = testViewAddSwiftTests;
-			productReference = B2B79E86219B542500927D36 /* testViewAddSwiftTests.xctest */;
+			productReference = B2B4BD0321A1FD6D00C39954 /* testViewAddSwiftTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		B2B79E90219B542500927D36 /* testViewAddSwiftUITests */ = {
@@ -141,7 +142,7 @@
 			);
 			name = testViewAddSwiftUITests;
 			productName = testViewAddSwiftUITests;
-			productReference = B2B79E91219B542500927D36 /* testViewAddSwiftUITests.xctest */;
+			productReference = B2B4BD0421A1FD6D00C39954 /* testViewAddSwiftUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
