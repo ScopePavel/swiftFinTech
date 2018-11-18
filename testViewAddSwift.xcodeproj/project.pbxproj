@@ -12,8 +12,6 @@
 		B2B79E7B219B542000927D36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2B79E79219B542000927D36 /* Main.storyboard */; };
 		B2B79E7D219B542500927D36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2B79E7C219B542500927D36 /* Assets.xcassets */; };
 		B2B79E80219B542500927D36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2B79E7E219B542500927D36 /* LaunchScreen.storyboard */; };
-		B2B79E8B219B542500927D36 /* testViewAddSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B79E8A219B542500927D36 /* testViewAddSwiftTests.swift */; };
-		B2B79E96219B542500927D36 /* testViewAddSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B79E95219B542500927D36 /* testViewAddSwiftUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,19 +32,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B2B79E72219B542000927D36 /* testViewAddSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testViewAddSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2B79E72219B542000927D36 /* testViewAddSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = testViewAddSwift.app; path = "/Users/pavelscope/swiftFinTech/build/Debug-iphoneos/testViewAddSwift.app"; sourceTree = "<absolute>"; };
 		B2B79E75219B542000927D36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2B79E77219B542000927D36 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B2B79E7A219B542000927D36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B2B79E7C219B542500927D36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2B79E7F219B542500927D36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2B79E81219B542500927D36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B2B79E86219B542500927D36 /* testViewAddSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testViewAddSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B2B79E8A219B542500927D36 /* testViewAddSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testViewAddSwiftTests.swift; sourceTree = "<group>"; };
-		B2B79E8C219B542500927D36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B2B79E91219B542500927D36 /* testViewAddSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testViewAddSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B2B79E95219B542500927D36 /* testViewAddSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testViewAddSwiftUITests.swift; sourceTree = "<group>"; };
-		B2B79E97219B542500927D36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2B79E86219B542500927D36 /* testViewAddSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = testViewAddSwiftTests.xctest; path = "/Users/pavelscope/swiftFinTech/build/Debug-iphoneos/testViewAddSwiftTests.xctest"; sourceTree = "<absolute>"; };
+		B2B79E91219B542500927D36 /* testViewAddSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = testViewAddSwiftUITests.xctest; path = "/Users/pavelscope/swiftFinTech/build/Debug-iphoneos/testViewAddSwiftUITests.xctest"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,20 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				B2B79E74219B542000927D36 /* testViewAddSwift */,
-				B2B79E89219B542500927D36 /* testViewAddSwiftTests */,
-				B2B79E94219B542500927D36 /* testViewAddSwiftUITests */,
-				B2B79E73219B542000927D36 /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		B2B79E73219B542000927D36 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B2B79E72219B542000927D36 /* testViewAddSwift.app */,
-				B2B79E86219B542500927D36 /* testViewAddSwiftTests.xctest */,
-				B2B79E91219B542500927D36 /* testViewAddSwiftUITests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		B2B79E74219B542000927D36 /* testViewAddSwift */ = {
@@ -105,24 +86,6 @@
 				B2B79E81219B542500927D36 /* Info.plist */,
 			);
 			path = testViewAddSwift;
-			sourceTree = "<group>";
-		};
-		B2B79E89219B542500927D36 /* testViewAddSwiftTests */ = {
-			isa = PBXGroup;
-			children = (
-				B2B79E8A219B542500927D36 /* testViewAddSwiftTests.swift */,
-				B2B79E8C219B542500927D36 /* Info.plist */,
-			);
-			path = testViewAddSwiftTests;
-			sourceTree = "<group>";
-		};
-		B2B79E94219B542500927D36 /* testViewAddSwiftUITests */ = {
-			isa = PBXGroup;
-			children = (
-				B2B79E95219B542500927D36 /* testViewAddSwiftUITests.swift */,
-				B2B79E97219B542500927D36 /* Info.plist */,
-			);
-			path = testViewAddSwiftUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,7 +176,7 @@
 				Base,
 			);
 			mainGroup = B2B79E69219B541F00927D36;
-			productRefGroup = B2B79E73219B542000927D36 /* Products */;
+			productRefGroup = B2B79E69219B541F00927D36;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -265,7 +228,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2B79E8B219B542500927D36 /* testViewAddSwiftTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +235,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2B79E96219B542500927D36 /* testViewAddSwiftUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -51,7 +51,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       self.creataDictanory()
+        self.creataDictanory()
         self.companyPickerView.delegate = self
         self.indicatorView.hidesWhenStopped = true
         self.indicatorView.startAnimating()
@@ -91,7 +91,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 for obj in cource {
                     dict[obj.companyName] =  obj.symbol
                 }
-                
+                self.companies = dict
+                DispatchQueue.main.async {
+                    self.companyPickerView.reloadAllComponents()
+                }
               print(dict)
             } catch {
                 
