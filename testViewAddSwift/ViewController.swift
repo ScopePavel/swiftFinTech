@@ -59,7 +59,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         self.indicatorView.hidesWhenStopped = true
         self.indicatorView.startAnimating()
         
-        self.reqestQuoteUpdate()
+        
         
 
     }
@@ -98,9 +98,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                     dict[obj.companyName] =  obj.symbol
                 }
                 self.companies = dict
+                
                 DispatchQueue.main.async {
+                    self.reqestQuoteUpdate()
                     self.companyPickerView.reloadAllComponents()
                 }
+                
                 print(dict)
             } catch {
                 
@@ -125,6 +128,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
         }
         dataTask.resume()
+        
         return dict
     }
     
@@ -264,7 +268,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 (response as? HTTPURLResponse)?.statusCode == 200,
                 let data = data
                 else {
-                    print("Network error")
+                   // print("Network error")
                     return }
             
             
