@@ -44,9 +44,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     case money
     case image
     }
-    func reloadAllComponents() {
-        
-    }
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -154,7 +152,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             (response as? HTTPURLResponse)?.statusCode == 200,
             let data = data
             else {
-                print("Network error")
+                self.createAlert(message: "Network error")
                 return
             }
             self.parseQuote(data:data, tagName: .nameCompany)
@@ -165,7 +163,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 (response as? HTTPURLResponse)?.statusCode == 200,
                 let data = data
                 else {
-                    print("Network error")
+                   self.createAlert(message: "Network error")
                     return
             }
             self.parseQuote(data:data, tagName:.money)
@@ -176,7 +174,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 (response as? HTTPURLResponse)?.statusCode == 200,
                 let data = data
                 else {
-                    print("Network error")
+                    self.createAlert(message: "Network error")
                     return
             }
             self.parseQuote(data:data, tagName:.image)
@@ -268,7 +266,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 (response as? HTTPURLResponse)?.statusCode == 200,
                 let data = data
                 else {
-                   // print("Network error")
+                  
                     return }
             
             
