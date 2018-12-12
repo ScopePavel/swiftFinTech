@@ -66,7 +66,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
 
     
-    func creataDictanory() -> [String:String]{
+    func creataDictanory() -> [String:String] {
         var dict : [String:String] = [:]
         struct GroceryProduct: Decodable {
             var symbol: String
@@ -119,11 +119,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             default:return
             }
-            
-            
-            
-            
-            
         }
         dataTask.resume()
         
